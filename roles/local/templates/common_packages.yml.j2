@@ -23,7 +23,7 @@ common_packages:
 {% if process_supervision == 'supervise' %}
   - name: daemontools
     version: 0.53
-    url: http://download.pingcap.org/daemontools-0.53.tar.gz
+    url: http://download.pingcap.org/daemontools-0.53-linux-amd64.tar.gz
     checksum: "sha256:a4abd491cf185aef5644be5a4e1ed52c8f458802178d4c0efcc8178a5ca67fb7"
 {% endif %}
 
@@ -53,6 +53,12 @@ common_packages:
     version: 1.1.0
     url: http://download.pingcap.org/kafka_exporter-1.1.0.linux-arm64.tar.gz
     checksum: "sha256:68a130c00dbd13a530b1ea6b7661427b6af32716ee12c02bab52fdd9e280aec0"
+{% if process_supervision == 'supervise' %}
+  - name: daemontools
+    version: 0.53
+    url: http://download.pingcap.org/daemontools-0.53-linux-arm64.tar.gz
+    checksum: "sha256:39884c7b714b1eff52e2acce0378c8200eb221174796fa54af6a1567f582938b"
+{% endif %}
 
 diagnosis_packages:
   - name: tidb-insight
